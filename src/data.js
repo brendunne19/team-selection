@@ -1,0 +1,36 @@
+export const initialPlayers = [
+  { id: 'm1', name: 'Alex Mercer', gender: 'M', grade: 'A2', rating: 845, minTeam: 1, available: true },
+  { id: 'm2', name: 'Liam Vance', gender: 'M', grade: 'B1', rating: 810, minTeam: 1, available: true },
+  { id: 'm3', name: 'Noah Patel', gender: 'M', grade: 'B1', rating: 798, minTeam: 2, available: true },
+  { id: 'm4', name: 'Ethan Brooks', gender: 'M', grade: 'B2', rating: 775, minTeam: 2, available: true },
+  { id: 'm5', name: 'Callum Reid', gender: 'M', grade: 'B2', rating: 762, minTeam: 2, available: true },
+  { id: 'm6', name: 'Marcus Sterling', gender: 'M', grade: 'C1', rating: 740, minTeam: 3, available: true },
+  { id: 'm7', name: 'Toby Jenkins', gender: 'M', grade: 'C1', rating: 731, minTeam: 3, available: true },
+  { id: 'm8', name: 'Samir Khan', gender: 'M', grade: 'C2', rating: 710, minTeam: 4, available: true },
+  { id: 'm9', name: 'Owen Gallagher', gender: 'M', grade: 'C2', rating: 695, minTeam: 4, available: true },
+  { id: 'm10', name: 'Harry Fletcher', gender: 'M', grade: 'D1', rating: 670, minTeam: 5, available: true },
+  { id: 'm11', name: 'Daniel Wu', gender: 'M', grade: 'D1', rating: 660, minTeam: 5, available: true },
+  { id: 'm12', name: 'Jack Thornton', gender: 'M', grade: 'D2', rating: 635, minTeam: 6, available: true },
+  { id: 'm13', name: 'Leo Bennett', gender: 'M', grade: 'E1', rating: 590, minTeam: 7, available: true },
+  { id: 'm14', name: 'Ryan Cooper', gender: 'M', grade: 'C1', rating: 728, minTeam: 3, available: false, injured: true },
+  { id: 'w1', name: 'Chloe Lin', gender: 'F', grade: 'A2', rating: 830, minTeam: 1, available: true },
+  { id: 'w2', name: 'Maya Sharma', gender: 'F', grade: 'B1', rating: 805, minTeam: 1, available: true },
+  { id: 'w3', name: 'Hannah Abbott', gender: 'F', grade: 'B2', rating: 780, minTeam: 2, available: true },
+  { id: 'w4', name: 'Sophie Clarke', gender: 'F', grade: 'B2', rating: 768, minTeam: 2, available: true },
+  { id: 'w5', name: "Grace O'Connor", gender: 'F', grade: 'C1', rating: 745, minTeam: 3, available: true },
+  { id: 'w6', name: 'Amelia Foster', gender: 'F', grade: 'C1', rating: 732, minTeam: 3, available: true },
+  { id: 'w7', name: 'Freya Lindqvist', gender: 'F', grade: 'C2', rating: 715, minTeam: 4, available: true },
+  { id: 'w8', name: 'Zara Ahmed', gender: 'F', grade: 'C2', rating: 702, minTeam: 4, available: true },
+  { id: 'w9', name: 'Emily Dawson', gender: 'F', grade: 'D1', rating: 680, minTeam: 5, available: true },
+  { id: 'w10', name: 'Niamh Walsh', gender: 'F', grade: 'D1', rating: 665, minTeam: 5, available: true },
+  { id: 'w11', name: 'Ruby Henderson', gender: 'F', grade: 'D2', rating: 640, minTeam: 6, available: true },
+  { id: 'w12', name: 'Isla MacLeod', gender: 'F', grade: 'E1', rating: 600, minTeam: 7, available: true },
+];
+
+const fixtures = [['Milton Keynes', 0], ['Redbridge', 0], ['Derby Arena', 1], ['Derby Arena', 1], ['Loughborough', 0], ['Birmingham', 1], ['Birmingham', 1]];
+export const initialTeams = fixtures.map(([venue, day], i) => ({
+  id: `t${i + 1}`, rank: i + 1, name: `County ${['1st', '2nd', '3rd', '4th', '5th', '6th', '7th'][i]} Team`,
+  date: day ? 'Sun 15 Nov' : 'Sat 14 Nov', venue,
+  men: [['m1', 'm2'], ['m3', 'm4'], ['m6'], [], [], [], []][i],
+  women: [['w1', 'w2'], ['w3', 'w4'], ['w5'], [], [], [], []][i],
+}));
